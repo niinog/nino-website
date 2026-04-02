@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Nino Godoradze | Speaker Portfolio</title>
+
+  <meta name="description" content="Nino Godoradze is a data scientist, speaker, and Fulbright Scholar speaking about psychology, data science, health data, and meaningful human-centered innovation." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+
+    :root {
+
+      --bg: #FEFAF5;
+
+      --bg-soft: #F5EDE0;
+
+      --text: #2B1A0F;
+
+      --muted: #7A5C46;
+
+      --line: #E3D0BC;
+
+      --accent: #B85C38;
+
+      --accent-hover: #9B4B2C;
+
+      --accent-soft: #FAF0E8;
+
+      --white: #FFFFFF;
+
+      --shadow: 0 8px 32px rgba(43, 26, 15, 0.10);
+
+      --shadow-warm: 0 8px 32px rgba(184, 92, 56, 0.12);
+
+      --radius: 24px;
+
+      --radius-sm: 16px;
+
+      --max: 1120px;
+
+      --dark-bg: #2B1A0F;
+
+    }
+
+
+
+    * { box-sizing: border-box; }
+
+
+
+    html { scroll-behavior: smooth; }
+
+
+
+    body {
+
+      margin: 0;
+
+      font-family: 'Lato', sans-serif;
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      line-height: 1.65;
+
+    }
+
+
+
+    img { max-width: 100%; display: block; }
+
+
+
+    a { color: inherit; text-decoration: none; }
+
+
+
+    .container {
+
+      width: min(var(--max), calc(100% - 32px));
+
+      margin: 0 auto;
+
+    }
+
+
+
+    .site-header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      background: rgba(254, 250, 245, 0.92);
+
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+
+    .header-inner {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding: 16px 0;
+
+    }
+
+
+
+    .brand-name {
+
+      font-family: 'DM Serif Display', serif;
+
+      font-size: 1.2rem;
+
+      font-weight: 400;
+
+      margin: 0;
+
+      letter-spacing: -0.01em;
+
+    }
+
+
+
+    .brand-role {
+
+      margin: 2px 0 0;
+
+      color: var(--muted);
+
+      font-size: 0.88rem;
+
+      font-weight: 300;
+
+      letter-spacing: 0.02em;
+
+    }
+
+
+
+    .nav {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 24px;
+
+      font-size: 0.9rem;
+
+      color: var(--muted);
+
+      letter-spacing: 0.01em;
+
+    }
+
+
+
+    .nav a {
+
+      position: relative;
+
+      transition: color 0.2s;
+
+    }
+
+
+
+    .nav a::after {
+
+      content: '';
+
+      position: absolute;
+
+      bottom: -2px;
+
+      left: 0;
+
+      width: 0;
+
+      height: 1px;
+
+      background: var(--accent);
+
+      transition: width 0.25s ease;
+
+    }
+
+
+
+    .nav a:hover { color: var(--accent); }
+
+    .nav a:hover::after { width: 100%; }
+
+
+
+    .hero {
+
+      padding: 80px 0 72px;
+
+      background: radial-gradient(ellipse 80% 60% at 70% 40%, #F5E0CC 0%, transparent 70%),
+
+                  radial-gradient(ellipse 50% 50% at 10% 80%, #EED9C4 0%, transparent 60%),
+
+                  var(--bg);
+
+    }
+
+
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.15fr 0.85fr;
+
+      gap: 48px;
+
+      align-items: center;
+
+    }
+
+
+
+    .pill {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      padding: 8px 16px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 999px;
+
+      color: var(--muted);
+
+      font-size: 0.85rem;
+
+      margin-bottom: 22px;
+
+      background: var(--white);
+
+      letter-spacing: 0.04em;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    .pill::before {
+
+      content: '';
+
+      width: 7px;
+
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+    }
+
+
+
+    h1, h2, h3 {
+
+      font-family: 'DM Serif Display', serif;
+
+      line-height: 1.1;
+
+      margin: 0;
+
+      font-weight: 400;
+
+    }
+
+
+
+    h1 {
+
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+
+      letter-spacing: -0.02em;
+
+      max-width: 700px;
+
+      color: var(--text);
+
+    }
+
+
+
+    .hero p.lead {
+
+      font-size: 1.08rem;
+
+      color: var(--muted);
+
+      max-width: 680px;
+
+      margin: 22px 0 0;
+
+      font-weight: 300;
+
+      line-height: 1.75;
+
+    }
+
+
+
+    .button-row {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 32px;
+
+    }
+
+
+
+    .btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 14px 24px;
+
+      border-radius: 14px;
+
+      border: 1px solid transparent;
+
+      font-family: 'Lato', sans-serif;
+
+      font-weight: 700;
+
+      font-size: 0.9rem;
+
+      letter-spacing: 0.02em;
+
+      transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+
+      cursor: pointer;
+
+    }
+
+
+
+    .btn:hover { transform: translateY(-2px); }
+
+
+
+    .btn-primary {
+
+      background: var(--accent);
+
+      color: var(--white);
+
+      box-shadow: 0 4px 18px rgba(184, 92, 56, 0.3);
+
+    }
+
+
+
+    .btn-primary:hover {
+
+      background: var(--accent-hover);
+
+      box-shadow: 0 6px 24px rgba(184, 92, 56, 0.4);
+
+    }
+
+
+
+    .btn-secondary {
+
+      border-color: var(--line);
+
+      background: var(--white);
+
+      color: var(--text);
+
+    }
+
+
+
+    .btn-secondary:hover {
+
+      border-color: var(--accent);
+
+      color: var(--accent);
+
+    }
+
+
+
+    .hero-card {
+
+      border: 1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      background: var(--white);
+
+      box-shadow: var(--shadow-warm);
+
+      padding: 24px;
+
+    }
+
+
+
+    .photo-placeholder {
+
+      aspect-ratio: 4 / 5;
+
+      border-radius: 18px;
+
+      border: 1.5px dashed var(--line);
+
+      background: linear-gradient(160deg, var(--bg-soft) 0%, #EDD9C4 100%);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      color: var(--muted);
+
+      padding: 20px;
+
+      font-size: 0.9rem;
+
+      font-weight: 300;
+
+    }
+
+
+
+    .hero-photo {
+
+      width: 100%;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      object-position: center top;
+
+      border-radius: 18px;
+
+      border: 1px solid var(--line);
+
+      display: block;
+
+      background: var(--bg-soft);
+
+    }
+
+
+
+    .stat-grid {
+
+      margin-top: 18px;
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 10px;
+
+    }
+
+
+
+    .stat {
+
+      background: var(--bg-soft);
+
+      border: 1px solid var(--line);
+
+      border-radius: 14px;
+
+      padding: 13px 14px;
+
+      transition: background 0.2s;
+
+    }
+
+
+
+    .stat:hover { background: #EDD9C4; }
+
+
+
+    .stat-label {
+
+      color: var(--muted);
+
+      font-size: 0.8rem;
+
+      margin-bottom: 3px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.07em;
+
+    }
+
+
+
+    .stat-value {
+
+      font-weight: 700;
+
+      font-size: 0.88rem;
+
+      color: var(--text);
+
+    }
+
+
+
+    .section { padding: 88px 0; }
+
+
+
+    .section-soft {
+
+      background: var(--bg-soft);
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+
+    .section-kicker {
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.2em;
+
+      font-size: 0.76rem;
+
+      color: var(--accent);
+
+      font-weight: 700;
+
+      margin-bottom: 14px;
+
+    }
+
+
+
+    .section-title {
+
+      font-size: clamp(2rem, 4vw, 3rem);
+
+      letter-spacing: -0.02em;
+
+      color: var(--text);
+
+    }
+
+
+
+    .section-intro {
+
+      margin-top: 14px;
+
+      color: var(--muted);
+
+      max-width: 700px;
+
+      font-size: 1rem;
+
+      font-weight: 300;
+
+      line-height: 1.75;
+
+    }
+
+
+
+    .about-grid,
+
+    .topics-grid,
+
+    .contact-grid {
+
+      display: grid;
+
+      gap: 48px;
+
+    }
+
+
+
+    .about-grid {
+
+      grid-template-columns: 0.85fr 1.15fr;
+
+      align-items: start;
+
+    }
+
+
+
+    .about-copy p {
+
+      margin: 0 0 18px;
+
+      color: #5A3D28;
+
+      font-size: 1rem;
+
+      font-weight: 300;
+
+      line-height: 1.8;
+
+    }
+
+
+
+    .cards-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+
+      margin-top: 36px;
+
+    }
+
+
+
+    .card {
+
+      border: 1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      background: var(--white);
+
+      box-shadow: var(--shadow);
+
+      padding: 26px;
+
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+
+    }
+
+
+
+    .card:hover {
+
+      transform: translateY(-4px);
+
+      box-shadow: var(--shadow-warm);
+
+    }
+
+
+
+    .card-top {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      justify-content: space-between;
+
+      gap: 14px;
+
+      margin-bottom: 16px;
+
+    }
+
+
+
+    .card-type {
+
+      color: var(--muted);
+
+      font-size: 0.82rem;
+
+      margin-bottom: 6px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.08em;
+
+    }
+
+
+
+    .card h3 {
+
+      font-size: 1.3rem;
+
+      letter-spacing: -0.01em;
+
+    }
+
+
+
+    .year-tag {
+
+      white-space: nowrap;
+
+      padding: 6px 12px;
+
+      border-radius: 999px;
+
+      background: var(--accent-soft);
+
+      border: 1px solid var(--line);
+
+      font-size: 0.8rem;
+
+      font-weight: 700;
+
+      color: var(--accent);
+
+    }
+
+
+
+    .card p {
+
+      color: var(--muted);
+
+      font-size: 0.96rem;
+
+      margin: 0;
+
+      font-weight: 300;
+
+      line-height: 1.7;
+
+    }
+
+
+
+    .detail-list {
+
+      margin: 18px 0 0;
+
+      padding: 0;
+
+      list-style: none;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 6px;
+
+    }
+
+
+
+    .detail-list li {
+
+      color: var(--text);
+
+      font-size: 0.9rem;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+    }
+
+
+
+    .detail-list li::before {
+
+      content: '';
+
+      width: 5px;
+
+      height: 5px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+      flex-shrink: 0;
+
+    }
+
+
+
+    .small-note {
+
+      margin-top: 18px;
+
+      padding: 11px 14px;
+
+      border-radius: 12px;
+
+      background: var(--bg-soft);
+
+      border: 1px dashed var(--line);
+
+      color: var(--muted);
+
+      font-size: 0.84rem;
+
+      font-weight: 300;
+
+    }
+
+
+
+    .topics-grid {
+
+      grid-template-columns: 0.9fr 1.1fr;
+
+      align-items: start;
+
+    }
+
+
+
+    .topic-tags {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 14px;
+
+    }
+
+
+
+    .topic {
+
+      padding: 18px 20px;
+
+      border-radius: 18px;
+
+      border: 1px solid var(--line);
+
+      background: var(--white);
+
+      font-weight: 700;
+
+      font-size: 0.92rem;
+
+      box-shadow: var(--shadow);
+
+      transition: background 0.2s, transform 0.2s, border-color 0.2s;
+
+      cursor: default;
+
+    }
+
+
+
+    .topic:hover {
+
+      background: var(--accent-soft);
+
+      border-color: var(--accent);
+
+      transform: translateY(-2px);
+
+    }
+
+
+
+    .testimonials-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 22px;
+
+      margin-top: 36px;
+
+    }
+
+
+
+    .testimonial {
+
+      border: 1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      background: var(--white);
+
+      box-shadow: var(--shadow);
+
+      padding: 32px 28px 26px;
+
+      position: relative;
+
+    }
+
+
+
+    .testimonial::before {
+
+      content: '\201C';
+
+      font-family: 'DM Serif Display', serif;
+
+      font-size: 5rem;
+
+      line-height: 1;
+
+      color: var(--accent);
+
+      opacity: 0.18;
+
+      position: absolute;
+
+      top: 10px;
+
+      left: 20px;
+
+    }
+
+
+
+    .testimonial p {
+
+      margin: 0;
+
+      color: #5A3D28;
+
+      font-size: 1rem;
+
+      font-weight: 300;
+
+      line-height: 1.8;
+
+      position: relative;
+
+    }
+
+
+
+    .testimonial-footer { margin-top: 20px; }
+
+
+
+    .testimonial-name {
+
+      font-weight: 700;
+
+      font-size: 0.95rem;
+
+    }
+
+
+
+    .testimonial-role {
+
+      font-size: 0.88rem;
+
+      color: var(--muted);
+
+      margin-top: 2px;
+
+    }
+
+
+
+    .form-card {
+
+      margin-top: 28px;
+
+      padding: 28px;
+
+      background: var(--bg-soft);
+
+      border: 1.5px dashed var(--line);
+
+      border-radius: var(--radius);
+
+    }
+
+
+
+    .form-card h3 {
+
+      margin-bottom: 10px;
+
+      font-size: 1.3rem;
+
+    }
+
+
+
+    .form-card p {
+
+      color: var(--muted);
+
+      font-size: 0.97rem;
+
+      font-weight: 300;
+
+      margin: 0 0 20px;
+
+    }
+
+
+
+    .contact-section {
+
+      background: var(--dark-bg);
+
+      color: var(--white);
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
+
+    .contact-section::before {
+
+      content: '';
+
+      position: absolute;
+
+      inset: 0;
+
+      background: radial-gradient(ellipse 60% 70% at 80% 50%, rgba(184,92,56,0.18) 0%, transparent 70%),
+
+                  radial-gradient(ellipse 40% 60% at 10% 20%, rgba(184,92,56,0.10) 0%, transparent 60%);
+
+      pointer-events: none;
+
+    }
+
+
+
+    .contact-grid {
+
+      grid-template-columns: 1.15fr 0.85fr;
+
+      align-items: start;
+
+      position: relative;
+
+    }
+
+
+
+    .contact-section .section-kicker { color: var(--accent); }
+
+
+
+    .contact-section .section-intro {
+
+      color: rgba(254, 250, 245, 0.65);
+
+    }
+
+
+
+    .contact-section .section-title { color: var(--white); }
+
+
+
+    .contact-card {
+
+      padding: 28px;
+
+      background: rgba(255, 255, 255, 0.05);
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      border-radius: var(--radius);
+
+      backdrop-filter: blur(10px);
+
+    }
+
+
+
+    .contact-card p {
+
+      margin: 0 0 14px;
+
+      color: rgba(254, 250, 245, 0.75);
+
+      font-size: 0.97rem;
+
+      font-weight: 300;
+
+    }
+
+
+
+    .contact-card strong {
+
+      color: var(--white);
+
+      font-weight: 700;
+
+    }
+
+
+
+    .contact-card a { color: var(--accent); }
+
+    .contact-card a:hover { text-decoration: underline; }
+
+
+
+    .contact-section .btn-primary {
+
+      background: var(--accent);
+
+      color: var(--white);
+
+    }
+
+
+
+    .contact-section .btn-secondary {
+
+      background: rgba(255,255,255,0.08);
+
+      border-color: rgba(255,255,255,0.2);
+
+      color: var(--white);
+
+    }
+
+
+
+    .contact-section .btn-secondary:hover {
+
+      background: rgba(255,255,255,0.14);
+
+      border-color: rgba(255,255,255,0.4);
+
+      color: var(--white);
+
+    }
+
+
+
+    .footer {
+
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+      margin-top: 52px;
+
+      padding-top: 20px;
+
+      color: rgba(254, 250, 245, 0.4);
+
+      font-size: 0.88rem;
+
+      position: relative;
+
+    }
+
+
+
+    .fade-in {
+
+      opacity: 0;
+
+      transform: translateY(20px);
+
+      transition: opacity 0.6s ease, transform 0.6s ease;
+
+    }
+
+
+
+    .fade-in.visible {
+
+      opacity: 1;
+
+      transform: translateY(0);
+
+    }
+
+
+
+    @media (max-width: 980px) {
+
+      .hero-grid,
+
+      .about-grid,
+
+      .topics-grid,
+
+      .contact-grid,
+
+      .cards-grid,
+
+      .testimonials-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .nav { display: none; }
+
+    }
+
+
+
+    @media (max-width: 640px) {
+
+      .hero, .section { padding: 60px 0; }
+
+      .header-inner { align-items: flex-start; }
+
+      .stat-grid, .topic-tags { grid-template-columns: 1fr; }
+
+      .btn { width: 100%; }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <div>
+
+        <p class="brand-name">Nino Godoradze</p>
+
+        <p class="brand-role">Data Scientist · Speaker · Fulbright Scholar</p>
+
+      </div>
+
+      <nav class="nav">
+
+        <a href="#about">About</a>
+
+        <a href="#speaking">Speaking</a>
+
+        <a href="#topics">Topics</a>
+
+        <a href="#testimonials">Recommendations</a>
+
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <span class="pill">Speaker portfolio</span>
+
+          <h1>Data scientist speaking about data, personal growth and meaningful change.</h1>
+
+          <p class="lead">
+
+            I speak at the intersection of psychology, data science, and human-centered innovation. This website highlights my speaking journey, featured talks, and ways to collaborate for panels, webinars, workshops, and events.
+
+          </p>
+
+          <div class="button-row">
+
+            <a class="btn btn-primary" href="#speaking">View speaking experience</a>
+
+            <a class="btn btn-secondary" href="#contact">Invite me to speak</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="hero-card">
+
+          <img class="hero-photo" src="nino-photo.jpg" alt="Portrait of Nino Godoradze" />
+
+          <div class="stat-grid">
+
+            <div class="stat">
+
+              <div class="stat-label">Focus</div>
+
+              <div class="stat-value">Psychology × Data Science</div>
+
+            </div>
+
+            <div class="stat">
+
+              <div class="stat-label">Based in</div>
+
+              <div class="stat-value">St. Louis, Missouri</div>
+
+            </div>
+
+            <div class="stat">
+
+              <div class="stat-label">Formats</div>
+
+              <div class="stat-value">Talks, panels, workshops</div>
+
+            </div>
+
+            <div class="stat">
+
+              <div class="stat-label">Profile</div>
+
+              <div class="stat-value">LinkedIn + speaker portfolio</div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="about" class="section section-soft">
+
+      <div class="container about-grid">
+
+        <div class="fade-in">
+
+          <div class="section-kicker">About</div>
+
+        </div>
+
+        <div class="about-copy fade-in">
+
+          <p>
+
+            Nino Godoradze is a data scientist, speaker, and Fulbright Scholar whose work sits at the intersection of psychology, data science, and human-centered innovation.
+
+          </p>
+
+          <p>
+
+            With a background that bridges psychology, economics, and analytics, she is especially interested in how data can be used to improve human lives. Her work and talks connect technical thinking with real-world outcomes.
+
+          </p>
+
+          <p>
+
+            This website is a home for her speaking portfolio, selected experiences, and future collaborations with organizers, communities, and teams.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="speaking" class="section">
+
+      <div class="container">
+
+        <div class="fade-in">
+
+          <div class="section-kicker">Speaking experience</div>
+
+          <h2 class="section-title">Talks, panels, and events</h2>
+
+          
+
+        </div>
+
+
+
+        <div class="cards-grid">
+
+          <article class="card fade-in">
+
+            <div class="card-top">
+
+              <div>
+
+                <div class="card-type">Featured speaking event</div>
+
+                <h3>TEDxSLU</h3>
+
+              </div>
+
+              <span class="year-tag">2025</span>
+
+            </div>
+
+            <p>
+
+              A featured TEDx appearance centered on using data to improve human lives, bringing together psychology, economics, and health data science.
+
+            </p>
+
+            <ul class="detail-list">
+
+              <li>TEDx speaker</li>
+
+              <li>Saint Louis</li>
+
+              <li>Human-centered data science</li>
+
+            </ul>
+
+            <div class="small-note">Add talk title, photo, or video link here.</div>
+
+          </article>
+
+
+
+          <article class="card fade-in">
+
+            <div class="card-top">
+
+              <div>
+
+                <div class="card-type">Speaker session</div>
+
+                <h3>International Girls in ICT Day 2025</h3>
+
+              </div>
+
+              <span class="year-tag">2025</span>
+
+            </div>
+
+            <p>
+
+              Presented "Data Science for Newbies," covering machine learning fundamentals, business understanding, and how data science creates impact across industries.
+
+            </p>
+
+            <ul class="detail-list">
+
+              <li>Student audience</li>
+
+              <li>Intro to data science</li>
+
+              <li>Business + machine learning</li>
+
+            </ul>
+
+            <div class="small-note">Add event photo or organizer link here.</div>
+
+          </article>
+
+
+
+          <article class="card fade-in">
+
+            <div class="card-top">
+
+              <div>
+
+                <div class="card-type">Upcoming talk</div>
+
+                <h3>WiDS Chicago Spring 2026</h3>
+
+              </div>
+
+              <span class="year-tag">2026</span>
+
+            </div>
+
+            <p>
+
+              Scheduled talk: "Keep Moving Until You Find Your Place: From Psychology to Health Data Science," along with participation in the career development panel.
+
+            </p>
+
+            <ul class="detail-list">
+
+              <li>Women in Data Science</li>
+
+              <li>Chicago</li>
+
+              <li>Career journey + data</li>
+
+            </ul>
+
+            <div class="small-note">Add registration, event page, or recap here.</div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="topics" class="section section-soft">
+
+      <div class="container topics-grid">
+
+        <div class="fade-in">
+
+          <div class="section-kicker">Topics</div>
+
+          <h2 class="section-title">What I can speak about</h2>
+
+          <p class="section-intro">
+
+            These can become keynote topics, webinars, guest lectures, workshops, podcast conversations, or community sessions.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="topic-tags fade-in">
+
+          <div class="topic">Psychology × Data Science</div>
+
+          <div class="topic">Career transitions into data</div>
+
+          <div class="topic">Health data science</div>
+
+          <div class="topic">Machine learning for beginners</div>
+
+          <div class="topic">Human-centered technology</div>
+
+          <div class="topic">Women in data and tech</div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="testimonials" class="section">
+
+      <div class="container">
+
+        <div class="fade-in">
+
+          <div class="section-kicker">Recommendations</div>
+
+          <h2 class="section-title">What people say</h2>
+
+          <p class="section-intro">
+
+            Use this section for approved testimonials from colleagues, managers, collaborators, organizers, or people who attended your talks.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="testimonials-grid">
+
+          <article class="testimonial fade-in">
+
+            <p>"Add your first approved recommendation here. Keep it short, specific, and outcome-oriented."</p>
+
+            <div class="testimonial-footer">
+
+              <div class="testimonial-name">Name Surname</div>
+
+              <div class="testimonial-role">Colleague / organizer / manager</div>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="testimonial fade-in">
+
+            <p>"You can manually add testimonials after reviewing submissions from your recommendation form."</p>
+
+            <div class="testimonial-footer">
+
+              <div class="testimonial-name">Future recommender</div>
+
+              <div class="testimonial-role">Event organizer / teammate</div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+
+        <div class="form-card fade-in">
+
+          <h3>Recommendation form</h3>
+
+          <p>
+
+            Best free setup: create a Tally or Google Form, collect submissions there, review them manually, and then add approved recommendations to this section.
+
+          </p>
+
+          <div class="button-row">
+
+            <a class="btn btn-primary" href="https://tally.so/" target="_blank" rel="noreferrer">Replace with your form link</a>
+
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/nino-godoradze/" target="_blank" rel="noreferrer">LinkedIn profile</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section id="contact" class="section contact-section">
+
+      <div class="container contact-grid">
+
+        <div class="fade-in">
+
+          <div class="section-kicker">Book me</div>
+
+          <h2 class="section-title">Planning a panel, talk, workshop, or guest session?</h2>
+
+          <p class="section-intro">
+
+            I'm open to speaking opportunities focused on data science, health data, career development, psychology, and the human side of technology.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="contact-card fade-in">
+
+          <p><strong>Email:</strong> <a href="mailto:nino.godoradze@example.com">nino.godoradze@example.com</a></p>
+
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nino-godoradze/" target="_blank" rel="noreferrer">linkedin.com/in/nino-godoradze</a></p>
+
+          <p><strong>Booking form:</strong> add your form or email call-to-action here</p>
+
+          <div class="button-row">
+
+            <a class="btn btn-primary" href="mailto:nino.godoradze@example.com">Send an inquiry</a>
+
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/nino-godoradze/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="container footer">
+
+        <p>© 2025 Nino Godoradze · Speaker portfolio · Built with care</p>
+
+      </div>
+
+    </section>
+
+
+
+  </main>
+
+
+
+  <script>
+
+    const observer = new IntersectionObserver((entries) => {
+
+      entries.forEach((entry, i) => {
+
+        if (entry.isIntersecting) {
+
+          const siblings = entry.target.parentElement.querySelectorAll('.fade-in');
+
+          let delay = 0;
+
+          siblings.forEach((el, idx) => {
+
+            if (el === entry.target) delay = idx * 80;
+
+          });
+
+          setTimeout(() => {
+
+            entry.target.classList.add('visible');
+
+          }, delay);
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    }, { threshold: 0.12 });
+
+
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  </script>
+
+
+
+</body>
+
+</html>
