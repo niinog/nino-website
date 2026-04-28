@@ -1248,29 +1248,104 @@
 
     }
 
+    .work-section {
+  background: #155d63;
+  color: #f7f1eb;
+}
+
+.work-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.work-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  color: #f7f1eb;
+}
+
+.work-subtitle {
+  margin-top: 14px;
+  color: rgba(247, 241, 235, 0.82);
+  font-size: 1.05rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.work-card {
+  border: 1px solid rgba(247, 241, 235, 0.45);
+  border-radius: 28px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.work-kicker {
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(247, 241, 235, 0.88);
+  margin: 0 0 16px;
+}
+
+.work-card h3 {
+  color: #f7f1eb;
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.work-text {
+  color: rgba(247, 241, 235, 0.85);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 0 22px;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.work-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f7f1eb;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.work-section .btn-primary {
+  background: #c5653d;
+  color: #fff;
+}
+
+.work-note {
+  margin-top: 16px;
+  color: rgba(247, 241, 235, 0.7);
+  font-size: 0.92rem;
+}
 
 
-    @media (max-width: 980px) {
 
-      .hero-grid,
-
-      .about-grid,
-
-      .topics-grid,
-
-      .contact-grid,
-
-      .cards-grid,
-
-      .testimonials-grid {
-
-        grid-template-columns: 1fr;
-
-      }
-
-      .nav { display: none; }
-
-    }
+   @media (max-width: 980px) {
+  .hero-grid,
+  .about-grid,
+  .topics-grid,
+  .contact-grid,
+  .cards-grid,
+  .testimonials-grid,
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav { display: none; }
+}
 
 
 
@@ -1351,8 +1426,7 @@
 
             <a class="btn btn-primary" href="#speaking">View speaking experience</a>
 
-            <a class="btn btn-secondary" href="#contact">Invite me to speak</a>
-
+            <a class="btn btn-secondary" href="#work-together">Invite me to speak</a>
           </div>
 
         </div>
@@ -1621,6 +1695,65 @@
       </div>
 
     </section>
+
+    <section id="work-together" class="section work-section">
+  <div class="container">
+    <div class="work-header fade-in">
+      <h2 class="work-title">Two ways to work together</h2>
+      <p class="work-subtitle">
+        Choose the format that fits — 60-minute 1:1 session, or a stage in front of your audience.
+      </p>
+    </div>
+
+    <div class="work-grid">
+
+      <article class="work-card fade-in">
+        <p class="work-kicker">1:1 SESSION</p>
+        <h3>For the technically brilliant — who quietly think they’re not enough.</h3>
+        <p class="work-text">
+          A 60-minute session for data scientists and STEM professionals who are technically strong — and quietly convinced they are not enough.
+        </p>
+
+        <div class="work-tags">
+          <span>60 minutes</span>
+          <span>Online</span>
+          
+        </div>
+
+        <a class="btn btn-primary" href="https://tally.so/r/pb01vB" target="_blank" rel="noreferrer">
+          Request a session
+        </a>
+
+        <p class="work-note">
+          Paid session 
+        </p>
+      </article>
+
+      <article class="work-card fade-in">
+        <p class="work-kicker">CONFERENCES & EVENTS</p>
+        <h3>Keynotes, panels, and workshops for your audience.</h3>
+        <p class="work-text">
+          Invite Nino to speak at your conference, corporate event, panel, or workshop.
+        </p>
+
+        <div class="work-tags">
+          <span>Keynote</span>
+          <span>Workshop</span>
+          <span>Panel</span>
+        </div>
+
+        <a class="btn btn-primary" href="https://tally.so/r/ob01pe" target="_blank" rel="noreferrer">
+          Invite Nino to speak
+        </a>
+
+        <p class="work-note">
+          Share event details and Nino will reply with availability.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
 
 
 
